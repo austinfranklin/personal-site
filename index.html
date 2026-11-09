@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Austin Franklin</title>
+  <meta name="description" content="Austin Franklin, composer, sound artist and researcher in Stockholm.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1 class="visually-hidden">Austin Franklin</h1>
+
+  <div id="stage" aria-hidden="true"></div>
+  <p id="error" class="error" hidden></p>
+
+  <header class="topbar">
+    <p class="name">Austin Franklin</p>
+    <p class="counter" aria-live="polite"><span id="found">0</span> of <span id="total">0</span> found</p>
+    <button id="index-btn" aria-expanded="false" aria-controls="index">Index</button>
+  </header>
+
+  <p id="hello" class="hello">Arrow keys to walk, space to jump. Or click where you want to go.</p>
+  <p id="hint" class="hint" hidden></p>
+
+  <div class="pad" aria-hidden="true">
+    <div class="dpad">
+      <button data-key="up" class="up">▲</button>
+      <button data-key="left" class="left">◀</button>
+      <button data-key="right" class="right">▶</button>
+      <button data-key="down" class="down">▼</button>
+    </div>
+    <button data-key="jump" class="act">Jump</button>
+  </div>
+
+  <nav id="index" class="index" hidden>
+    <h2>Index</h2>
+    <p class="index-note">Things you find on the map show up here.</p>
+    <div id="index-list"></div>
+  </nav>
+
+  <div id="pages" class="pages">
+    <section class="page" id="page-about" data-group="about">
+      <h2>About</h2>
+      <div class="text">
+        <p>Austin Franklin (b. 1995) is an internationally recognized composer, sound artist, developer and researcher. His interests include music involving process, methodical thematic development, and an attention to texture and form. His work has been described as having “great subtlety and sophistication” (The American Prize) and as “striking and delightful” (New York Concert Review). In 2022 he made his Carnegie Hall debut with his String Quartet No. 1 “Lanterns” and was awarded The American Prize for Composition.</p>
+        <p>He started out as a percussionist in high school, and began composing at Lamar University after an injury kept him from practising for over a year. He went on to a master’s in composition and a PhD in Experimental Music &amp; Digital Media at Louisiana State University, and now lives in Stockholm, where he is a lecturer at Södertörn University.</p>
+        <p>Central to his use of technology is accessibility, modularity and reusability, often through music information retrieval. His recent research with Spotify, Ericsson and teenage engineering, funded by KKS through the IRESAP project, looked at spatial and merged reality audio, music information retrieval, personal information management, and networked and web-based audio. He has released several open source tools for composers and performers.</p>
+        <p>Several of his percussion works are published by C-Alan Publications. His music has been performed in North America, South America, Europe and Asia by ensembles including the Västerås Sinfonietta, Hypercube, The Estrella Consort, Four Corners Ensemble and the Constantinides New Music Ensemble. Awards include the Petrichor International Music Competition, The American Prize for Composition, the RMN Call for Electroacoustic Works, the PARMA Winter Call for Scores and the ABLAZE Electronic Masters Series.</p>
+      </div>
+    </section>
+    <section class="page" id="page-contact" data-group="about">
+      <h2>Contact</h2>
+      <div class="text">
+        <p><a href="mailto:austin.franklin@sh.se">austin.franklin@sh.se</a></p>
+        <p><a href="https://www.instagram.com/austinfranklinmusic/">Instagram</a><br><a href="https://austinfranklinmusic.com/">austinfranklinmusic.com</a></p>
+      </div>
+    </section>
+    <section class="page" id="page-quartet" data-group="music" data-reel="https://www.instagram.com/reel/DRryfgLiGLh/">
+      <h2>String Quartet No. 1 “Lanterns”</h2>
+      <div class="text">
+        <p class="meta">For string quartet, 2019. 15 minutes.</p>
+        <p>Based on Stephen Crane’s poem “Each Small Gleam was a Voice”, where one line, “Little songs of carmine, violet, green, gold”, keeps coming back. I read the poem as a world where sight and sound are tied together, where you can’t perceive one without the other. The piece is in two movements.</p>
+        <p>Premiered at Carnegie Hall in 2022 by the Constantinides New Music Ensemble.</p>
+      </div>
+    </section>
+    <section class="page" id="page-concentric" data-group="music" data-reel="https://www.instagram.com/reel/DMphymLoqAB/">
+      <h2>Concentric Circles</h2>
+      <div class="text">
+        <p class="meta">For crotales and vibraphone, cello, piano and live electronics, 2021. 10 minutes.</p>
+        <p>The piece is about overlapping patterns and cycles. It turns around a harmonic progression that steps downward and changes a little each time it comes back. The electronics listen to all three players at once and work partly from an average of what they hear.</p>
+        <p>Premiered by Jacob Ottmer, Audrey Hudgens and Stephanie Pestana.</p>
+      </div>
+    </section>
+    <section class="page" id="page-flower" data-group="music" data-reel="https://www.instagram.com/reel/DM-9m6boNfI/">
+      <h2>Flower of the Sun</h2>
+      <div class="text">
+        <p class="meta">For saxophone quartet, 2022. 5 minutes.</p>
+        <p>Built on one small rhythmic idea, a dotted quarter note, which weaves in and out of the textures, harmonies and meters around it, sometimes subtly and sometimes plainly. It’s often playful, almost toy-like, but it passes through moments of beauty, tension and strength too.</p>
+        <p>Played by The Estrella Consort.</p>
+      </div>
+    </section>
+    <section class="page" id="page-witch" data-group="music" data-reel="https://www.instagram.com/reel/DTsdiQUCOQa/">
+      <h2>The Witch Hunt</h2>
+      <div class="text">
+        <p class="meta">For Disklavier, 2020. Three movements.</p>
+        <p>From my album <em>Four Idols</em>, which takes its name from Francis Bacon’s four idols of the mind, the errors in thinking that come from flawed reasoning, bias, careless words and personal experience. <em>The Witch Hunt</em> refers to the mass witch trials of early modern Europe and to Bacon’s Idols of the Tribe.</p>
+        <p><a href="https://austinfranklin12.bandcamp.com/album/four-idols">Four Idols on Bandcamp</a></p>
+      </div>
+    </section>
+    <section class="page" id="page-rave" data-group="projects">
+      <h2>Old spaces, new rave</h2>
+      <div class="text">
+        <p class="meta">Distributed performance, Norbergfestival.</p>
+        <p>A performance spread out through a forest. Listeners walk around with their own phones and headphones, and the music is rendered as location-based augmented reality with MPEG-I immersive audio. Three performers move through the area too, so what you hear depends on where you are and where they are.</p>
+        <p>Made with Rikard Lindell and Henrik Frisk as part of IRESAP.</p>
+      </div>
+    </section>
+    <section class="page" id="page-murk" data-group="music" data-reel="https://www.instagram.com/reel/DWOqHtICBEg/">
+      <h2>Murk</h2>
+      <div class="text">
+        <p class="meta">For orchestra and the Auxtrument, 2024.</p>
+        <p>“Since moving to Sweden in August 2023, my life has overflowed with new experiences. Murk is an exploration of these experiences, a journey through the conflicting emotions that have shaped my time here. The piece unfolds as a meandering stream of energy, at times foreboding, at times buoyant and promising. There is the exhilaration of immersing myself in a new culture and language; there is also the weight of Swedish winters, cultural isolation and alienation. Through Murk, I hope to convey the complexities, depths and polarity of this period of adapting to a land where light and darkness have played such a profound role in daily life.”</p>
+        <p>Premiered by the Västerås Sinfonietta. I played one of the percussion parts. The Auxtrument brought the sound of a Swedish forest into the hall, and the high winds play kulning, the old Swedish herding call.</p>
+      </div>
+    </section>
+    <section class="page" id="page-auxtrument" data-group="projects">
+      <h2>The Auxtrument</h2>
+      <div class="text">
+        <p class="meta">Web-based instrument, with Rikard Lindell and Henrik Frisk.</p>
+        <p>A reverberation chamber spread across several places at once. The sound from the concert hall is sent over a mobile network to other locations, played through loudspeakers there, recorded again and sent back. In the hall it comes back through speakers around the audience, carrying the acoustics and background noise of each place with it.</p>
+        <p>For <em>Murk</em> we used a forest, a tunnel under central Västerås and a concrete stairwell, and treated the network’s delays as part of the music.</p>
+      </div>
+    </section>
+    <section class="page" id="page-bloom" data-group="music" data-reel="https://www.instagram.com/reel/DSXhZSSiGH8/">
+      <h2>Bloom</h2>
+      <div class="text">
+        <p class="meta">For cello and live electronics, 2021.</p>
+        <p>A piece about tension, using a flower blooming as the model for both the material and the form. It starts with a very simple melody in natural harmonics. All of the electronic sound comes from the cello itself, live.</p>
+        <p>Commissioned and performed by Eduard Teregulov. Selected for the ISMIR 2022 music programme.</p>
+      </div>
+    </section>
+    <section class="page" id="page-smallworlds" data-group="music" data-reel="https://www.instagram.com/reel/DbDXkliIUBa/">
+      <h2>Small Worlds</h2>
+      <div class="text">
+        <p class="meta">For alto saxophone, electric guitar, piano and percussion, 2021. 6 minutes.</p>
+        <p>Based on Wassily Kandinsky’s prints <em>Small Worlds I–XII</em>, which use a very small set of materials, only lines, points and blots of colour. The music works with its material through different degrees of notational freedom, sometimes graphic and improvised, sometimes strictly notated. Each section opens up a different thing: rhythm, pitch or form.</p>
+        <p>Played by the Hypercube Ensemble.</p>
+      </div>
+    </section>
+    <section class="page" id="page-clock" data-group="music" data-reel="https://www.instagram.com/reel/DMFNhQoIpYq/">
+      <h2>The Clock and the Train</h2>
+      <div class="text">
+        <p class="meta">For wind ensemble, 2022. 9 minutes.</p>
+        <p>Based on René Magritte’s painting <em>Time Transfixed</em>, which has a clock on a mantelpiece and a steam train rushing out of the fireplace below it. Frozen together, the two give you motion and stillness at the same time.</p>
+        <p>The piece moves between the two using a small set of themes. Sometimes time stretches out against the steady pulse of the train, and sometimes it stops completely. It ends somewhere outside time, with earlier themes coming back disconnected from each other and from the music around them.</p>
+      </div>
+    </section>
+    <section class="page" id="page-unfinder" data-group="projects" data-reel="https://www.instagram.com/reel/DbvPez-q_cw/">
+      <h2>The Unfinder</h2>
+      <div class="text">
+        <p class="meta">Open source, openFrameworks. Made within IRESAP.</p>
+        <p>An app for organising the media files on your hard drives and performing with them, so you can improvise with your own archive of recordings. It uses FFmpeg.</p>
+        <p>Paper: “Sonic Serendipity: Embracing Discovery in File Finder-Based Improvisation”, with Henrik Frisk and Rikard Lindell, NIME 2024.</p>
+      </div>
+    </section>
+    <section class="page" id="page-bounded" data-group="projects">
+      <h2>Bounded</h2>
+      <div class="text">
+        <p class="meta">Open source live coding environment.</p>
+        <p>Live coding music with natural language and bounded language models. The model runs on your own computer.</p>
+      </div>
+    </section>
+    <section class="page" id="page-dom" data-group="projects" data-reel="https://www.instagram.com/reel/DcyY5mQI6uE/">
+      <h2>DOM live coding</h2>
+      <div class="text">
+        <!-- TODO: description -->
+        <p>Live coding in the browser.</p>
+      </div>
+    </section>
+    <section class="page" id="page-lightmotif" data-group="projects">
+      <h2>Lightmotif</h2>
+      <div class="text">
+        <p class="meta">Game, made in Godot.</p>
+        <p>A game you play with a real instrument, through a microphone.</p>
+      </div>
+    </section>
+    <section class="page" id="page-mosaics" data-group="music" data-reel="https://www.instagram.com/reel/DMXSeKqoO1k/">
+      <h2>Rhythmic Mosaics</h2>
+      <div class="text">
+        <p class="meta">For marimba, vibraphone and live electronics, 2021.</p>
+        <p>Inspired by abstract, geometric visual art built from patterns. The two mallet instruments build up interlocking rhythmic patterns, with the electronics worked into them. It placed second in The American Prize for Composition (chamber music) in 2022.</p>
+        <p>Played by Jacob Ottmer and Micheal Barnes.</p>
+      </div>
+    </section>
+    <section class="page" id="page-motion" data-group="music" data-reel="https://www.instagram.com/reel/DLz99l7opvI/">
+      <h2>The Theory of Motion</h2>
+      <div class="text">
+        <p class="meta">For percussion quartet, 2023. 13 minutes.</p>
+        <p>An experiment in rhythm that mixes jazz, progressive rock and post-tonal techniques into a kaleidoscope of rhythmic development and groove. It draws on the flowing forces of nature, like wind and water, and on the rigid, mechanical forces of machines. It opens with an ambient, drone-like soundscape and gets faster all the way through, each stage putting the material in a new context.</p>
+        <p>Commissioned by a consortium led by Jacob Ottmer and premiered by the Western Oregon University Percussion Studio.</p>
+      </div>
+    </section>
+    <section class="page" id="page-io" data-group="music" data-reel="https://www.instagram.com/reel/DbVJr0iowZ_/">
+      <h2>I/O</h2>
+      <div class="text">
+        <p class="meta">For snare drum and reflexive electronics, 2022. 7 minutes.</p>
+        <p>The whole piece grows out of one two-note idea, which develops differently depending on whether the snares are on or off. With them on it’s closer to drum corps and traditional playing; with them off it gets improvisational and explosive. The electronics change with the snares as well, and all of their sound comes from the drum.</p>
+        <p>Played by Micheal Barnes.</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js@8.6.6/dist/pixi.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
